@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Art Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Videos for Crossfade -->
+  <video id="bgVideoA" autoplay muted loop playsinline class="bgVideo active">
+    <source src="assets\videos\video-2.mp4" type="video/mp4">
+  </video>
+
+  <video id="bgVideoB" autoplay muted loop playsinline class="bgVideo">
+    <source src="" type="video/mp4">
+  </video>
+
+  <!-- Overlay UI -->
+  <div id="overlay">
+
+    <!-- Description Panel -->
+    <div id="description">
+      <h1 id="artTitle">Artwork One</h1>
+      <p id="artDesc">
+        This is a poetic description of the first artwork.
+        It explores light, memory, and digital texture.
+      </p>
+    </div>
+
+    <!-- Gallery Area -->
+    <div id="gallery"
+         onmouseenter="startHover()"
+         onmouseleave="stopHover()">
+
+      <!-- p5 Canvas goes here -->
+      <div id="canvas-container"></div>
+
+      <!-- Music Controls -->
+      <button id="musicBtn" onclick="toggleMusic()">Play Music</button>
+
+    </div>
+
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgMusic" src="assets/audio/whatsapp-audio.mpeg" loop></audio>
+
+  <script src="libs/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
